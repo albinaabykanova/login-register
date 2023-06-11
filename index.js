@@ -156,3 +156,49 @@ let countedNames = names.reduce((allNames, name) => {
   return allNames;
 }, {});
 console.log(countedNames);
+
+const numbers = [2, 3, 4];
+
+let total = numbers.reduce(function (acc, number) {
+  return acc * number;
+});
+
+console.log(total);
+
+// Path: index.js
+
+let users = ["Ali", "Ahmet", "Can", "Ayşe", "Fatma", "Hayriye", "Ali"];
+
+const userListDom = document.querySelector("#userList");
+
+for (index = 0; index < users.length; index++) {
+  const liDOM = document.createElement("li");
+  liDOM.innerHTML = users[index];
+  userListDom.appendChild(liDOM);
+}
+
+for (let i = 1; i <= 10; i++) {
+  if (i % 2 == 1) {
+    console.log("enes");
+  } else {
+    console.log("kaya");
+  }
+}
+
+for (var i = 0; i <= 10; i++) {
+  if (i == 5) {
+    continue;
+  }
+  console.log("i: " + i);
+}
+
+console.log("Döngüden çıkartıldı");
+
+cikis_etiketi: for (var i = 0; i <= 5; i++) {
+  for (var j = 0; j <= 50; j++) {
+    if (j == 9) {
+      break cikis_etiketi;
+    }
+    console.log("iç döngüden j: " + j);
+  }
+}
